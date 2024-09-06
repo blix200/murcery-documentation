@@ -33,8 +33,8 @@ local Library = {
 	Themes = {
 		Legacy = {
 Main = Color3.fromRGB(255, 0, 0),
-			Secondary = Color3.fromRGB(255, 0, 0),
-			Tertiary = Color3.fromRGB(255, 0, 0),
+			Secondary = Color3.fromRGB(54, 1, 1),
+			Tertiary = Color3.fromRGB(54, 1, 1),
 
 			StrongText = Color3.fromHSV(0/360, 255/255, 255/255),        
 			WeakText = Color3.fromHSV(0/360, 255/255, 255/255)
