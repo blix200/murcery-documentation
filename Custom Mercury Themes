@@ -74,12 +74,12 @@ local Library = {
 		},
 		Vaporwave = {},
 		OperaGX = {
-Main = Color3.fromRGB(19, 21, 21),
-			Secondary = Color3.fromRGB(250,30,78),
-			Tertiary = Color3.fromRGB(206,38,84),
+Main = Color3.fromRGB(250,30,78),
+			Secondary = Color3.fromRGB(206,38,84),
+			Tertiary = Color3.fromRGB(162,46,90),
 
 			StrongText = Color3.fromHSV(0, 0, 1),        
-			WeakText = Color3.fromHSV(0, 0, 172/255)
+			WeakText = Color3.fromHSV(320/360, 139/255, 118/255)
 		},
 		VisualStudio = {}
 	},
