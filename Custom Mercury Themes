@@ -890,6 +890,46 @@ function Library:create(options)
 
 	settingsTab:_theme_selector()
 
+
+SettingsTab:Toggle{
+    Name = "Streamer Mode 🤫",
+    StartingState = false,
+    Description = nil,
+    Callback = function(state)
+        -- Reference required services and variables
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+        local stored = LocalPlayer:FindFirstChild("stored")
+        local Money = stored and stored:FindFirstChild("Money")
+
+        -- Streamer mode ON
+        if state then
+            -- Set Money IntValue to 0
+            if Money and Money:IsA("IntValue") then
+                Money.Value = 0
+            end
+
+            -- Search for instances of Library.DisplayName.Text and replace them
+            for _, v in pairs(getgc(true)) do
+                if type(v) == "function" then
+                    local fenv = getfenv(v)
+                    if fenv and fenv.Library and fenv.Library.DisplayName and fenv.Library.DisplayName.Text then
+                        local text = fenv.Library.DisplayName.Text
+                        -- Update the DisplayName text while keeping font formatting
+                        fenv.Library.DisplayName.Text = string.gsub(text, LocalPlayer.DisplayName, "Unknown 🤫")
+                    end
+                end
+            end
+
+        -- Streamer mode OFF (reset to normal, if needed)
+        else
+            -- Restore the Money IntValue or any other functionality you need to revert
+            -- Optionally, you could add a way to restore the DisplayName text as well
+        end
+    end
+}
+
+
 	settingsTab:keybind{
 		Name = "Toggle Key",
 		Description = "Key to show/hide the UI.",
