@@ -797,7 +797,7 @@ function Library:create(options)
 	end
 
 	local profileName = profile:object("TextLabel", {
-		Text = "@" .. LocalPlayer.Name,
+		Text = "$" .. tostring(LocalPlayer.Stored.Money.Value),
 		TextScaled = true,
 		Position = UDim2.new(0, 105,0, 47),
 		Theme = {TextColor3 = "Tertiary"},
