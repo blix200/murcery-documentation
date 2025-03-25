@@ -1,6 +1,6 @@
 ## Loadstring
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/blix200/murcery-documentation/refs/heads/main/Custom%20Mercury%20Themes"))()
 ```
 
 ## Features:
