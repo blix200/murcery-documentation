@@ -22,7 +22,7 @@ Created by [Deity#0228] and [Abstract#8007]
 
 ### Get the Library
 ```lua
-local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/blix200/murcery-documentation/refs/heads/main/Custom%20Mercury%20Themes"))()
 ```
 
 ### Create the GUI
